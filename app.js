@@ -23,7 +23,7 @@ app.post('/sub', (req, res) => {
 });
 app.post('/divs', (req, res) => {
     const { valor1, valor2 } = req.body;
-    const result = valor1 + valor2;
+    const result = valor1 / valor2;
     res.json({ result });
 });
 
