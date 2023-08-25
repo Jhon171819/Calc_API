@@ -1,0 +1,41 @@
+body {
+    background-color: black;
+    color: rgb(253, 253, 253);
+}
+
+#valor1 {
+    border-color: blue;
+    border-bottom: 100%;
+}
+
+#valor2 {
+    border-color: red;
+    border-bottom: 100%;
+}
+
+label {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    align-items: center;
+}
+
+#resultado {
+    font-size: 80px;
+    font-family: Arial;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    align-items: center;
+    color: rgb(0, 0, 0);
+}
+
+div {
+    background-color: lightgrey;
+    width: 150px;
+    border: 15px solid rgb(57, 3, 78);
+    padding: 100px;
+    text-align: center;
+}
