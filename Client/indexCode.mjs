@@ -3,7 +3,7 @@ async function performOperation(operation) {
     const valor2 = parseFloat(document.getElementById("valor2").value);
 
 
-    const response = await fetch(`http://localhost:3000/${operation}`, {
+    const response = await fetch(`https://jhon171819.github.io/Calc_API/${operation}`, {
         method: 'POST', 
         mode: 'no-cors',
 
