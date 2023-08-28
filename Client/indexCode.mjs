@@ -12,7 +12,7 @@ async function performOperation(operation) {
         body: JSON.stringify({valor1, valor2})
     };
 
-    fetch(url,opcoes)
+    const response = fetch(url,opcoes)
     const data = await response.json();
     document.getElementById("resultado").textContent = `${data.result}`;
 }
