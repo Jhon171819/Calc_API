@@ -5,6 +5,7 @@ async function performOperation(operation) {
 
     const response = await fetch(`https://jhon171819.github.io/Calc_API/${operation}`, {
         method: 'POST', 
+        mode: 'no-cors'
 
         headers: {
             'Content-Type': 'application/json'

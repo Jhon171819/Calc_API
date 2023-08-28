@@ -2,7 +2,10 @@ const express = require('express');
 const app = express();
 const cors = require("cors")
 const port = 3000;
-
+const whitelist = ['https://calc-api.vercel.app/', 'https://www.google.com/', "https://jhon171819.github.io/Calc_API/"]
+app.use(cors({
+    methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
+}));
 app.use(cors({
     origin: ['https://calc-api.vercel.app/', 'https://www.google.com/', "https://jhon171819.github.io/Calc_API/"]
 }))
