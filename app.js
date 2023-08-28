@@ -3,7 +3,9 @@ const app = express();
 const cors = require("cors")
 const port = 3000;
 
-app.use(cors())
+app.use(cors({
+    origin: ['https://calc-api.vercel.app/', 'https://www.google.com/', "https://jhon171819.github.io/Calc_API/"]
+}))
 app.use(express.json());
 
 app.use(express.static('https://jhon171819.github.io/Calc_API/' + 'Client'));
