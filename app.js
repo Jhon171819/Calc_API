@@ -3,16 +3,13 @@ const app = express();
 const cors = require("cors")
 const port = 3000;
 const whitelist = ['https://calc-api.vercel.app/', 'https://www.google.com/', "https://jhon171819.github.io/Calc_API/"]
-app.use(cors({
-    methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
-}));
-<<<<<<< HEAD
-=======
 
->>>>>>> fffe16574f3a868179a68c641b3b104fa189a7ea
 app.use(cors({
     origin: ['https://calc-api.vercel.app', 'https://www.google.com/', "https://jhon171819.github.io/Calc_API/"]
 }))
+app.use(cors({
+    methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
+}));
 app.use(express.json());
 
 app.use(express.static('https://jhon171819.github.io/Calc_API/' + 'Client'));
