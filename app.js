@@ -6,8 +6,12 @@ const whitelist = ['https://calc-api.vercel.app/', 'https://www.google.com/', "h
 app.use(cors({
     methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
 }));
+<<<<<<< HEAD
+=======
+
+>>>>>>> fffe16574f3a868179a68c641b3b104fa189a7ea
 app.use(cors({
-    origin: ['https://calc-api.vercel.app/', 'https://www.google.com/', "https://jhon171819.github.io/Calc_API/"]
+    origin: ['https://calc-api.vercel.app', 'https://www.google.com/', "https://jhon171819.github.io/Calc_API/"]
 }))
 app.use(express.json());
 
