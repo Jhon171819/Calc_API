@@ -6,7 +6,7 @@ app.use(express.json());
 
 app.use(express.static(__dirname + '/Client'));
 
-app.post('/add', (req, res) => {
+app.post('/adi', (req, res) => {
     const { valor1, valor2 } = req.body;
     const result = valor1 + valor2;
     res.json({ result });
