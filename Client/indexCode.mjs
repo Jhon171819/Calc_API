@@ -13,7 +13,7 @@ async function performOperation(operation) {
     try {
         const response = await fetch(url, opcoes);
         const responseData = await response.json();
-        document.getElementById("resultado").textContent = `${responseData.resultado}`;
+        document.getElementById("resultado").textContent = `${responseData.result}`;
     } catch (error) {
         console.error("Ocorreu um erro:", error);
     }
