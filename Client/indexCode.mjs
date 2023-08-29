@@ -2,16 +2,12 @@ async function performOperation(operation) {
     const valor1 = parseFloat(document.getElementById("valor1").value);
     const valor2 = parseFloat(document.getElementById("valor2").value);
     const url = `http://localhost:3000/${operation}`;
-    const data = {
-        valor1: valor1,
-        valor2: valor2
-    };
     const opcoes = {
         method: 'POST', 
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(data) 
+        body: JSON.stringify({valor1, valor2}) 
     };
 
     try {
