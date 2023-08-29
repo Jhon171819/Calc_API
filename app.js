@@ -14,7 +14,7 @@ app.use(express.json());
 
 app.use(express.static('https://jhon171819.github.io/Calc_API/' + 'Client'));
 
-app.post('https://calc-api.vercel.app/adi', (req, res) => {
+app.post('https://calc-api.vercel.app/api/adi', (req, res) => {
     const { valor1, valor2 } = req.body;
     const result = valor1 + valor2;
     res.json({ result });
