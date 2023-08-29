@@ -17,7 +17,7 @@ app.use(express.static('https://jhon171819.github.io/Calc_API/' + 'Client'));
 app.post('/adi', (req, res) => {
     const { valor1, valor2 } = req.body;
     const result = valor1 + valor2;
-    res.json({ result });
+    response.json({ result });
 });
 app.post('/mult', (req, res) => {
     const { valor1, valor2 } = req.body;
