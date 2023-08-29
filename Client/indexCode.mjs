@@ -13,9 +13,13 @@ async function performOperation(operation) {
     };
 
     const response = fetch(url,opcoes)
-    const data = await response.json();
-    document.getElementById("resultado").textContent = `${data.result}`;
-}
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("resultado").textContent = `${data.result}`;
+        })
+        }
+    
+    
 
 function modoClaro() {
     document.getElementById("corpo").style.backgroundColor = "white";
