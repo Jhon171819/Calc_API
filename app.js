@@ -3,7 +3,7 @@ const app = express();
 const cors = require("cors")
 const port = 3000;
 const whitelist = ['https://calc-api.vercel.app/', 'https://www.google.com/', "https://jhon171819.github.io/Calc_API/"]
-
+const vrL = "https://calc-api.vercel.app/Client"
 app.use(cors({
     origin: ['https://calc-api.vercel.app', 'https://www.google.com/', "https://jhon171819.github.io/Calc_API/"]
 }))
@@ -14,7 +14,7 @@ app.use(express.json());
 
 app.use(express.static('https://jhon171819.github.io/Calc_API/' + 'Client'));
 
-app.post('https://calc-api.vercel.app/api/adi', (req, res) => {
+app.post(vrL + '/adi', (req, res) => {
     const { valor1, valor2 } = req.body;
     const result = valor1 + valor2;
     res.json({ result });

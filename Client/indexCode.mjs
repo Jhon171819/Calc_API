@@ -1,7 +1,7 @@
 async function performOperation(operation) {
     const valor1 = parseFloat(document.getElementById("valor1").value);
     const valor2 = parseFloat(document.getElementById("valor2").value);
-    const url = `https://calc-api.vercel.app/api/${operation}`;
+    const url = `https://calc-api.vercel.app/Client/${operation}`;
     const opcoes = {
         method: 'POST', 
         headers: {
@@ -27,6 +27,6 @@ function modoClaro() {
 }
 
 function modoEscuro() {
-    document.getElementById("corpo").style.backgroundColor = "black"
-    document.getElementById("corpo").style.color = "white"
+    document.getElementById("corpo").style.backgroundColor = "black";
+    document.getElementById("corpo").style.color = "white";
 }
