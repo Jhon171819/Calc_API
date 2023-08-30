@@ -1,7 +1,7 @@
 async function performOperation(operation) {
     const valor1 = parseFloat(document.getElementById("valor1").value);
     const valor2 = parseFloat(document.getElementById("valor2").value);
-    const url = `https://calc-api.vercel.app/Service/${operation}`;
+    const url = `/Service/${operation}`;
     const opcoes = {
         method: 'POST', 
         headers: {
