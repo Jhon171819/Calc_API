@@ -18,6 +18,15 @@ async function performOperation(operation) {
         console.error("Ocorreu um erro:", error);
     }
 }
+
+async function getFunction(){
+    const response = await fetch('/api'), {
+        method: 'GET';
+        Headers: {
+            'Content-Type': 'application/json'
+        };
+    };
+};
     
     
 
