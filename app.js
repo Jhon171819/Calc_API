@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const cors = require("cors");
-const urldinamica = require('./Service/Urldinamica');
+const urldinamica = require('./api/Urldinamica');
 const port = 3000;
 const whitelist = ['https://calc-api.vercel.app/', 'https://www.google.com/', "https://jhon171819.github.io/Calc_API/"]
 const vrL = "https://calc-api.vercel.app/Client"

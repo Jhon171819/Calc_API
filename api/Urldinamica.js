@@ -1,6 +1,6 @@
 const express = require("express");
 const urldinamica = express.Router();
-const actUrl = "/Service";
+const actUrl = "/api";
 urldinamica.use(express.static("https://calc-api.vercel.app/" + "Client"));
 
 urldinamica.post(actUrl + '/adi', (req, res) => {
