@@ -25,7 +25,7 @@ async function getFunction() {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
-            };
+            }
         });
 
         if (!response.ok) {
