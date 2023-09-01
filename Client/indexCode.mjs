@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         method: 'POST',
         headers {
             Content-Type: 'application/json'
-        }
+        },
         body: JSON.stringify({operation: 'adi'})
     }
     somarB.addEventListener('click', async () =>{
