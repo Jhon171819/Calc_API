@@ -13,7 +13,7 @@ app.use(cors({
 }));
 app.use(express.json());
 
-app.use(express.static('https://jhon171819.github.io/Calc_API/' + 'Client'));
+app.use(express.static('https://calc-api.vercel.app/' + 'Client'));
 app.use(urldinamica)
 
 app.listen(port, () => {

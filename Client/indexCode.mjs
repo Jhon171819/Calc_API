@@ -21,7 +21,7 @@ async function performOperation(operation) {
 
 async function getFunction(){
     const response = await fetch('/api'), {
-        method: 'GET';
+        method: 'GET',
         Headers: {
             'Content-Type': 'application/json'
         };
