@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         body: JSON.stringify({operation: 'adi'})
     }
     somarB.addEventListener('click', async () =>{
-        const response = await fetch('/api/Urldinamica', opcoes)
+        const response = await fetch('/api/', opcoes)
             .then(response => response.json());
         document.getElementById('resultado').textContent = JSON.stringify(response);
 
