@@ -19,14 +19,20 @@ async function performOperation(operation) {
     }
 }
 
-async function getFunction(){
-    const response = await fetch('/api'), {
-        method: 'GET',
-        Headers: {
-            'Content-Type': 'application/json'
-        };
-    };
-};
+async function getFunction() {
+    try {
+        const response = await fetch('/api', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            };
+        });
+
+        if (!response.ok) {
+            throw new Error('Erro na requisição');
+        }
+    }
+}
     
     
 
