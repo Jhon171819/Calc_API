@@ -31,6 +31,12 @@ async function getFunction() {
         if (!response.ok) {
             throw new Error('Erro na requisição');
         }
+        
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Ocorreu um erro:', error);
+        throw error;
     }
 }
     
