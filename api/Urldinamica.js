@@ -8,15 +8,14 @@ urldinamica.get('/api', (req,res) => res.send("get funcionando"))
 exports.handler = async function (event) {
     const eventBody = JSON.parse(event.body;)
 
-    if (eventBody.operation == 'adi') {
-       try {
+    try {
         const { valor1, valor2 } = JSON.parse(event.body);
         const result = valor1 + valor2;
         
-        return {
-            statusCode: 200,
-            body: JSON.stringify({ result })
-        };
+    return {
+        statusCode: 200,
+        body: JSON.stringify({ result })
+    };
     } catch (error) {
         return {
             statusCode: 400,
@@ -25,7 +24,6 @@ exports.handler = async function (event) {
     } 
     }
     
-}
 
 
 urldinamica.post(actUrl + '/adi', (req, res) => {
