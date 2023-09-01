@@ -23,12 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const valor1 = parseFloat(document.getElementById("valor1").value);
     const valor2 = parseFloat(document.getElementById("valor2").value);
     const somarB = document.getElementById("somar")
-    somarB.addEventListener('click', async () =>{
-        const response = await fetch('/api/Urldinamica', 
+    const opcoes = {
         method: 'POST',
-        body: JSON.stringify({
-            operation: 'adi'})
-        )
+        body: JSON.stringify({operation: 'adi'})
+    }
+    somarB.addEventListener('click', async () =>{
+        const response = await fetch('/api/Urldinamica', opcoes)
             .then(response => response.json());
         document.getElementById('resultado').textContent = JSON.stringify(response);
 
