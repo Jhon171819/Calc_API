@@ -7,7 +7,7 @@ urldinamica.get('/api', (req,res) => res.send("get funcionando"))
 
 exports.handler = async function (event) {
     const eventBody = JSON.parse(event.body);
-
+    if (eventBody == "adi") {
     try {
         const { valor1, valor2 } = JSON.parse(event.body);
         const result = valor1 + valor2;
@@ -21,7 +21,7 @@ exports.handler = async function (event) {
             statusCode: 400,
             body: JSON.stringify({ error: 'Erro na requisição' })
         };
-    } 
+    } }
     }
     
 
