@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     somarB.addEventListener('click', async () =>{
         console.log('o botão esta indo')
         const response = await fetch('/api/Urldinamica', opcoes)
-            .then(responseData = await response.json());
+        responseData = await response.json();
         console.log('passamos pelo fetch')
         document.getElementById('resultado').textContent = `${responseData}`;
 
