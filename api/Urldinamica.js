@@ -1,3 +1,4 @@
+import app from '../app'
 const express = require('express');
 const urldinamica = express.Router();
 urldinamica.use(express.json());
@@ -48,5 +49,5 @@ urldinamica.post(actUrl +'/divs', (req, res) => {
     const result = valor1 / valor2;
     res.json({ result });
 });
-
+export default app;
 module.exports = urldinamica
