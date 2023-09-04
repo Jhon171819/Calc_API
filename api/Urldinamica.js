@@ -1,7 +1,9 @@
 const express = require("express");
 const urldinamica = express.Router();
+const bodyParser = require('body-parser');
 const actUrl = "/api";
 urldinamica.use(express.static("https://calc-api.vercel.app/" + "Client"));
+urldinamica.use(bodyParser);
 
 urldinamica.get('/api/Urldinamica', (req,res) => res.send("get funcionando"))
 exports.handler = async function (event) {
