@@ -1,13 +1,15 @@
-const express = require("express");
+const express = require('express');
 const urldinamica = express.Router();
-const actUrl = "/api";
-urldinamica.use(express.static("https://calc-api.vercel.app/" + "Client"));
 urldinamica.use(express.json());
+const actUrl = "/api";
+
+urldinamica.use(express.static("https://calc-api.vercel.app/" + "Client"));
 
 urldinamica.get('/api/Urldinamica', (req,res) => res.send("get funcionando"))
 exports.handler = async function (event) {
     const eventBody = JSON.parse(event.body).operation;   
     if (eventBody == "adi") {
+        console.log('entramos na SF')
     try {
         const { valor1, valor2 } = JSON.parse(event.body);
         const result = valor1 + valor2;
