@@ -6,7 +6,7 @@ urldinamica.use(express.static("https://calc-api.vercel.app/" + "Client"));
 urldinamica.get('/api', (req,res) => res.send("get funcionando"))
 
 exports.handler = async function (event) {
-    const eventBody = JSON.parse(event.body;)
+    const eventBody = JSON.parse(event.body);
 
     try {
         const { valor1, valor2 } = JSON.parse(event.body);
