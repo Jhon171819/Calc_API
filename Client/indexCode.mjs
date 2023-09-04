@@ -28,11 +28,11 @@ document.addEventListener('DOMContentLoaded', () => {
         headers: {
             'Content-Type' : 'application/json'
         },
-        body: JSON.stringify({operation: "adi", valor1, valor2})
+        body: JSON.stringify({valor1, valor2})
     }
     somarB.addEventListener('click', async () =>{
         console.log('o botão esta indo')
-        const response = await fetch('/api/Urldinamica', opcoes)
+        const response = await fetch('/api/adi', opcoes)
         responseData = await response.json();
         console.log('passamos pelo fetch')
         document.getElementById('resultado').textContent = `${responseData}`;
