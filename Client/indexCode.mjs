@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         headers: {
             'Content-Type' : 'application/json'
         },
-        body: JSON.stringify({"operation": "adi", valor1, valor2})
+        body: JSON.stringify({operation: "adi", valor1, valor2})
     }
     somarB.addEventListener('click', async () =>{
         console.log('o botão esta indo')
