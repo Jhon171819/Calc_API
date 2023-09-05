@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(valores);
         console.log(opcoes);
         
-        const response = await fetch('http://localhost:3000/adi', opcoes)
+        const response = await fetch('https://calc-api.vercel.app/adi', opcoes)
         const responseData = await response.json();
         console.log('passamos pelo fetch')
         document.getElementById('resultado').textContent = `${responseData.resultado}`;
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(valores);
         console.log(opcoes);
         
-        const response = await fetch('http://localhost:3000/mult', opcoes)
+        const response = await fetch('https://calc-api.vercel.app/mult', opcoes)
         const responseData = await response.json();
         console.log('passamos pelo fetch')
         document.getElementById('resultado').textContent = `${responseData.resultado}`;
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(valores);
         console.log(opcoes);
         
-        const response = await fetch('http://localhost:3000/sub', opcoes)
+        const response = await fetch('https://calc-api.vercel.app/sub', opcoes)
         const responseData = await response.json();
         console.log('passamos pelo fetch')
         document.getElementById('resultado').textContent = `${responseData.resultado}`;
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(valores);
         console.log(opcoes);
         
-        const response = await fetch('http://localhost:3000/divs', opcoes)
+        const response = await fetch('https://calc-api.vercel.app/divs', opcoes)
         const responseData = await response.json();
         console.log('passamos pelo fetch')
         document.getElementById('resultado').textContent = `${responseData.resultado}`;
