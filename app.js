@@ -17,25 +17,25 @@
 // app.post('/adi', (req, res) => {
 //     const { valor1, valor2 } = req.body;
 //     const resultado = valor1 + valor2;
-//     res.status(200).json({ resultado });
+//     res.json({ resultado });
 //   });
   
 // app.post('/mult', (req, res) => {
 //     const { valor1, valor2 } = req.body;
 //     const resultado = valor1 * valor2;
-//     res.status(200).json({ resultado });
+//     res.json({ resultado });
 // });
 
 // app.post('/sub', (req, res) => {
 //     const { valor1, valor2 } = req.body;
 //     const resultado = valor1 - valor2;
-//     res.status(200).json({ resultado });
+//     res.json({ resultado });
 // });
 
 // app.post('/divs', (req, res) => {
 //     const { valor1, valor2 } = req.body;
 //     const resultado = valor1 / valor2;
-//     res.status(200).json({ resultado });
+//     res.json({ resultado });
 // });
 
 
@@ -68,25 +68,25 @@ app.get('/', (req,res) => res.send("pagina padrão"))
 app.post('/adi', (req, res) => {
     const { valor1, valor2 } = req.body;
     const resultado = valor1 + valor2;
-    res.status(200).json({ resultado });
+    res.json({ resultado });
 });
 
 app.post('/mult', (req, res) => {
     const { valor1, valor2 } = req.body;
     const resultado = valor1 * valor2;
-    res.status(200).json({ resultado });
+    res.json({ resultado });
 });
 
 app.post('/sub', (req, res) => {
     const { valor1, valor2 } = req.body;
     const resultado = valor1 - valor2;
-    res.status(200).json({ resultado });
+    res.json({ resultado });
 });
 
 app.post('/divs', (req, res) => {
     const { valor1, valor2 } = req.body;
     const resultado = valor1 / valor2;
-    res.status(200).json({ resultado });
+    res.json({ resultado });
 });
 
 app.listen(port, () => {
