@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const valor1 = parseFloat(document.getElementById("valor1").value);
     const valor2 = parseFloat(document.getElementById("valor2").value);
+    console.log({valor1, valor2})
     const somarB = document.getElementById("somar");
     const multB = document.getElementById("mult");
     const subB = document.getElementById("sub");
@@ -17,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const response = await fetch('http://localhost:3000/adi', opcoes)
         responseData = await response.json();
         console.log('passamos pelo fetch')
-        document.getElementById('resultado').textContent = `${responseData}`;
+        document.getElementById('resultado').textContent = `${responseData.resultado}`;
 
     })
 
