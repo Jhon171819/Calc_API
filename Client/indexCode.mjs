@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const subB = document.getElementById("sub");
     const divB = document.getElementById("div")
     const opcoes = {
+        valor1: parseFloat(document.getElementById("valor1").value),
+        valor2: parseFloat(document.getElementById("valor2").value),
         method: 'POST',
         headers: {
             'Content-Type' : 'application/json'
@@ -36,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const response = await fetch('http://localhost:3000/sub', opcoes)
         responseData = await response.json();
         console.log('passamos pelo fetch')
-        document.getElementById('resultado').textContent = `${responseData}`;
+        document.getElementById('resultado').textContent = `${responseData.resultado}`;
 
     })
 
@@ -45,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const response = await fetch('http://localhost:3000/divs', opcoes)
         responseData = await response.json();
         console.log('passamos pelo fetch')
-        document.getElementById('resultado').textContent = `${responseData}`;
+        document.getElementById('resultado').textContent = `${responseData.resultado}`;
         
     })
 })
