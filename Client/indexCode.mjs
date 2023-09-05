@@ -1,7 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const valor1 = document.getElementById("valor1").value;
-    const valor2 = document.getElementById("valor2").value;
-    console.log({valor1, valor2})
     const somarB = document.getElementById("somar");
     const multB = document.getElementById("mult");
     const subB = document.getElementById("sub");
@@ -15,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         body: JSON.stringify({valor1, valor2})
     }
+    console.log(opcoes)
     somarB.addEventListener('click', async () =>{
         console.log('o botão esta indo')
         const response = await fetch('http://localhost:3000/adi', opcoes)
