@@ -22,7 +22,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const valor1 = parseFloat(document.getElementById("valor1").value);
     const valor2 = parseFloat(document.getElementById("valor2").value);
-    const somarB = document.getElementById("somar")
+    const somarB = document.getElementById("somar");
+    const multB = document.getElementById("mult");
+    const subB = document.getElementById("sub");
+    const divB = document.getElementById("div")
     const opcoes = {
         method: 'POST',
         headers: {
@@ -32,13 +35,39 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     somarB.addEventListener('click', async () =>{
         console.log('o botão esta indo')
-        const response = await fetch('/api/adi', opcoes)
+        const response = await fetch('/adi', opcoes)
         responseData = await response.json();
         console.log('passamos pelo fetch')
         document.getElementById('resultado').textContent = `${responseData}`;
 
     })
 
+    multB.addEventListener('click', async () =>{
+        console.log('o botão esta indo')
+        const response = await fetch('/mult', opcoes)
+        responseData = await response.json();
+        console.log('passamos pelo fetch')
+        document.getElementById('resultado').textContent = `${responseData}`;
+
+    })
+
+    subB.addEventListener('click', async () =>{
+        console.log('o botão esta indo')
+        const response = await fetch('/sub', opcoes)
+        responseData = await response.json();
+        console.log('passamos pelo fetch')
+        document.getElementById('resultado').textContent = `${responseData}`;
+
+    })
+
+    divB.addEventListener('click', async () =>{
+        console.log('o botão esta indo')
+        const response = await fetch('/divs', opcoes)
+        responseData = await response.json();
+        console.log('passamos pelo fetch')
+        document.getElementById('resultado').textContent = `${responseData}`;
+        
+    })
 })
     
 
