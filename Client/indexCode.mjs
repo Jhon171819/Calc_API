@@ -15,11 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
         headers: {
             'Content-Type' : 'application/json'
         },
-        body: JSON.stringify(pegarValores())
+        body: JSON.stringify(pegarValores().valor1, pegarValores().valor2)
     }
     
     somarB.addEventListener('click', async () =>{
-        console.log(pegarValores())
+        console.log(pegarValores(), pegarValores().valor1)
         console.log(opcoes)
         console.log('o botão esta indo')
         const response = await fetch('http://localhost:3000/adi', opcoes)
