@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     somarB.addEventListener('click', async () =>{
         console.log('o botão esta indo')
-        const response = await fetch('/adi', opcoes)
+        const response = await fetch('localhost:3000/adi', opcoes)
         responseData = await response.json();
         console.log('passamos pelo fetch')
         document.getElementById('resultado').textContent = `${responseData}`;
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     multB.addEventListener('click', async () =>{
         console.log('o botão esta indo')
-        const response = await fetch('/mult', opcoes)
+        const response = await fetch('localhost:3000/mult', opcoes)
         responseData = await response.json();
         console.log('passamos pelo fetch')
         document.getElementById('resultado').textContent = `${responseData}`;
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     subB.addEventListener('click', async () =>{
         console.log('o botão esta indo')
-        const response = await fetch('/sub', opcoes)
+        const response = await fetch('localhost:3000/sub', opcoes)
         responseData = await response.json();
         console.log('passamos pelo fetch')
         document.getElementById('resultado').textContent = `${responseData}`;
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     divB.addEventListener('click', async () =>{
         console.log('o botão esta indo')
-        const response = await fetch('/divs', opcoes)
+        const response = await fetch('localhost:3000/divs', opcoes)
         responseData = await response.json();
         console.log('passamos pelo fetch')
         document.getElementById('resultado').textContent = `${responseData}`;

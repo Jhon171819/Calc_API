@@ -63,6 +63,7 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
+app.get('/', (req,res) => res.send("pagina padrão"))
 
 app.post('/adi', (req, res) => {
     const { valor1, valor2 } = req.body;
