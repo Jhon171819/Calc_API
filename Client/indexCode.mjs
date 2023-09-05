@@ -3,17 +3,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const multB = document.getElementById("mult");
     const subB = document.getElementById("sub");
     const divB = document.getElementById("div")
+    function pegarValores() {
+        const valor1 = parseFloat(document.getElementById("valor1").value);
+        const valor2 = parseFloat(document.getElementById("valor2").value);
+        return {valor1, valor2}
+    }
+    
     const opcoes = {
-        valor1: parseFloat(document.getElementById("valor1").value),
-        valor2: parseFloat(document.getElementById("valor2").value),
+        
         method: 'POST',
         headers: {
             'Content-Type' : 'application/json'
         },
-        body: JSON.stringify({valor1, valor2})
+        body: JSON.stringify(pegarValores())
     }
-    console.log(opcoes)
+    
     somarB.addEventListener('click', async () =>{
+        console.log(pegarValores())
+        console.log(opcoes)
         console.log('o botão esta indo')
         const response = await fetch('http://localhost:3000/adi', opcoes)
         responseData = await response.json();
