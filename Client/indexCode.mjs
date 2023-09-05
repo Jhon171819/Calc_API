@@ -1,24 +1,3 @@
-// async function performOperation(operation) {
-//     const valor1 = parseFloat(document.getElementById("valor1").value);
-//     const valor2 = parseFloat(document.getElementById("valor2").value);
-//     const url = `/api/${operation}`;
-//     const opcoes = {
-//         method: 'POST', 
-//         headers: {
-//             'Content-Type': 'application/json'
-//         },
-//         body: JSON.stringify({valor1, valor2}) 
-//     };
-
-//     try {
-//         const response = await fetch(url, opcoes);
-//         const responseData = await response.json();
-//         document.getElementById("resultado").textContent = `${responseData.result}`;
-//     } catch (error) {
-//         console.error("Ocorreu um erro:", error);
-//     }
-// }
-
 document.addEventListener('DOMContentLoaded', () => {
     const valor1 = parseFloat(document.getElementById("valor1").value);
     const valor2 = parseFloat(document.getElementById("valor2").value);

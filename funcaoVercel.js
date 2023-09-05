@@ -1,4 +1,4 @@
-module.exports = (req, res) => {
+module.exports = functi(req, res) => {
     if (req.method === 'POST') {
       // Lógica de manipulação de solicitações POST aqui
       const requestBody = req.body;

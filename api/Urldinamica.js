@@ -6,7 +6,6 @@ const actUrl = "/api";
 
 urldinamica.use(express.static("https://calc-api.vercel.app/" + "Client"));
 
-urldinamica.get('/api/Urldinamica', (req,res) => res.send("get funcionando"))
 
 urldinamica.post('https://calc-api.vercel.app/'+ 'adi', (req, res) => {
     const { valor1, valor2 } = req.body;
