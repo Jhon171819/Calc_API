@@ -63,7 +63,7 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-app.get('/', (req,res) => res.send("pagina padrão"))
+
 
 app.post('/adi', (req, res) => {
     const { valor1, valor2 } = req.body;
@@ -71,23 +71,29 @@ app.post('/adi', (req, res) => {
     res.json({ resultado });
 });
 
+app.get('/adi', (req,res) => res.json({ resultado }));
+
 app.post('/mult', (req, res) => {
     const { valor1, valor2 } = req.body;
     const resultado = valor1 * valor2;
     res.json({ resultado });
 });
 
+app.get('/mult', (req,res) => res.json({ resultado }));
+
 app.post('/sub', (req, res) => {
     const { valor1, valor2 } = req.body;
     const resultado = valor1 - valor2;
     res.json({ resultado });
 });
+app.get('/sub', (req,res) => res.json({ resultado }));
 
 app.post('/divs', (req, res) => {
     const { valor1, valor2 } = req.body;
     const resultado = valor1 / valor2;
     res.json({ resultado });
 });
+app.get('/divs', (req,res) => res.json({ resultado }));
 
 app.listen(port, () => {
     console.log(`App is running at the port ${port}`);
